@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="trying">#d5591a</color>
+    <color name="save">#772e25</color>
+    <color name="bck">#e0c879</color>
+    <color name="btncolor">#197278</color>
+    <color name="graydark">#8F8F8F</color>
+    <color name="statusColor">#264653</color>
+
+    <color name="gray">#ECECEC</color>
+    <color name="grayDark">#656565</color>
+    <color name="grayDarkDisabled">#8F8F8F</color>
+    <color name="colorText">#282828</color>
+    <color name="strokeColor">#1E88E5</color>
+    <color name="opaqueBG">#61000000</color>
+    <color name="playerColor">#FF4349</color>
+</resources>

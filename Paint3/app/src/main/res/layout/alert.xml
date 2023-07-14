@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#adb6c4">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bush Properities"
+        android:textStyle="italic"
+        android:textColor="@color/trying"
+        android:textSize="28sp"
+        android:layout_margin="20dp">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Size"
+            android:textSize="19sp"
+            android:layout_margin="8dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <SeekBar
+                android:id="@+id/seekbarSize"
+                android:layout_width="180dp"
+                android:layout_height="15dp"
+                android:max="35"
+                android:progress="1"
+                android:layout_margin="4dp"/>
+            <TextView
+                android:id="@+id/textViewSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text=" 1 "
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Transparan"
+            android:textSize="19sp"
+            android:layout_margin="8dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <SeekBar
+                android:id="@+id/seekbarTransparan"
+                android:layout_width="180dp"
+                android:layout_height="15dp"
+                android:max="255"
+                android:progress="255"
+                android:layout_margin="4dp"/>
+            <TextView
+                android:id="@+id/textViewTranspaaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text=" 255 "
+                android:textStyle="bold"
+                android:layout_margin="4dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

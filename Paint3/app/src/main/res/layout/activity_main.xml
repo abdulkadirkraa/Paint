@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/constraintLayout">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title=" "
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvFilename"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:gravity="center"
+                android:layout_marginEnd="46dp" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="@id/toolbar"
+            android:layout_margin="12dp">
+
+            <ImageButton
+                android:id="@+id/btnUndo"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_undo"
+                android:background="@drawable/backgrd"
+                android:layout_marginEnd="6dp"/>
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_delete"
+                android:background="@drawable/backgrd"
+                android:layout_marginEnd="6dp"/>
+
+            <ImageButton
+                android:id="@+id/btnBrush"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_brush"
+                android:background="@drawable/backgrd"
+                android:layout_marginEnd="6dp"/>
+
+            <ImageButton
+                android:id="@+id/btnColor"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_color"
+                android:background="@drawable/backgrd"
+                android:layout_marginEnd="6dp"/>
+
+            <ImageButton
+                android:id="@+id/btnClean"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_clean"
+                android:background="@drawable/backgrd"
+                android:layout_marginEnd="6dp"/>
+
+            <ImageButton
+                android:id="@+id/btnRedo"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_redo"
+                android:background="@drawable/backgrd"
+                android:layout_marginEnd="6dp"/>
+
+            <ImageButton
+                android:id="@+id/btnSave"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/ic_save"
+                android:background="@drawable/backgrd"
+                android:layout_marginStart="20dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.mihir.drawingcanvas.drawingView
+            android:id="@+id/drawing_view"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll"
+            app:layout_constraintVertical_bias="0.0">
+        </com.mihir.drawingcanvas.drawingView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/bottom_sheet"
+        android:id="@+id/bottomSheetSave"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
